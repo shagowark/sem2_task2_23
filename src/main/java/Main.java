@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) throws Exception{
-        new Frame();
+        //new Frame();
         LinkedList<Integer> list1 = new LinkedList<>();
-        list1.add(10);
+        list1.add(7);
         list1.add(8);
         list1.add(9);
         LinkedList<Integer> list2 = new LinkedList<>();

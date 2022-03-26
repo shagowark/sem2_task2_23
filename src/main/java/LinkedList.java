@@ -64,6 +64,21 @@ public class LinkedList<T> {
         size--;
     }
 
+    public void addElem(LinkedList<T> list, int index) throws Exception{
+        if (size == 0){
+            tail = list.getNode(index);
+            list.remove(index);
+            tail.next = null;
+            head = tail;
+        } else {
+            tail.next = list.getNode(index);
+            list.remove(index);
+            tail.next.next = null;
+            tail = tail.next;
+        }
+        size++;
+    }
+
     public int size() {
         return size;
     }
@@ -76,4 +91,5 @@ public class LinkedList<T> {
         }
         return getNode(index).value;
     }
+
 }

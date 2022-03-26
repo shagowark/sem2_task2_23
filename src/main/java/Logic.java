@@ -14,30 +14,25 @@ public class Logic {
 
         int i = 0;
         int j = 0;
-        while (list1.size() != 0){
+        while (list1.size() != 0 || list2.size() != 0){
             if (list2.size() == 0){
-                result.add(list1.get(i));
-                list1.remove(i);
+                result.addElem(list1, i);
+                continue;
+            }
+
+            if (list1.size() == 0){
+                result.addElem(list2, j);
                 continue;
             }
 
             if (list1.get(i) < list2.get(j)){
-                result.add(list1.get(i));
-                list1.remove(i);
+                result.addElem(list1, i);
             } else if (Objects.equals(list1.get(i), list2.get(j))){
-                result.add(list1.get(i));
-                result.add(list2.get(j));
-                list1.remove(i);
-                list2.remove(j);
+                result.addElem(list1, i);
+                result.addElem(list2, j);
             } else{
-                result.add(list2.get(j));
-                list2.remove(j);
+                result.addElem(list2, j);
             }
-        }
-
-        while (list2.size() != 0){
-            result.add(list2.get(j));
-            list2.remove(j);
         }
 
         return result;
