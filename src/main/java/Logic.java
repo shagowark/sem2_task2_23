@@ -5,11 +5,6 @@ public class Logic {
         checkIfListSorted(list1);
         checkIfListSorted(list2);
 
-        if (list2.size() > list1.size()){
-            LinkedList<Integer> temp = list1;
-            list1 = list2;
-            list2 = temp;
-        }
         LinkedList<Integer> result = new LinkedList<>();
 
         int i = 0;
