@@ -17,7 +17,7 @@ public class Frame extends JFrame{
 
     private final JFileChooser fileChooserOpen;
     public Frame() {
-        this.setTitle("Task3");
+        this.setTitle("Task2");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(panelMain);
         this.pack();

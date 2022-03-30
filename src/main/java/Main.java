@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) throws Exception{
-        //new Frame();
+        new Frame();
         LinkedList<Integer> list1 = new LinkedList<>();
         list1.add(7);
         list1.add(8);
